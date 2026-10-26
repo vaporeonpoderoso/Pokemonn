@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 35px 20px;
+    background-image: url('./images/images/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+
+    transition: filter 5s ease;
+}
+
+body.preto-branco{
+    filter: grayscale(100%);
+}
+
+
+/* ===== POKÉMON LOGO ===== */
+
+body > img{
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 3px #241c35);
+}
+
+
+/* ===== LAVENDER TOWN SCREEN ===== */
+
+#area{
+    position: relative;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    margin-top: 5px;
+    background-color: #c8b5d8;
+    border: 5px solid #30283d;
+    border-radius: 15px;
+    box-shadow:
+        0 0 0 4px #78648b,
+        0 10px 25px rgba(25, 15, 40, 0.55);
+}
+
+
+/* ===== POKÉBALL ===== */
+
+#pokebola{
+    position: absolute;
+    width: 130px;
+    height: auto;
+    top: 0;
+    left: 0;
+    transition:
+        filter 0.3s,
+        transform 0.3s;
+}
+
+#pokebola:hover{
+    filter: drop-shadow(0 0 10px #d9bfff);
+    transform: scale(1.05);
+}
+
+
+/* ===== BUTTON AREA ===== */
+
+.controles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 12px 16px;
+    background: #30283d;
+    border: 2px solid #78648b;
+    border-radius: 12px;
+    box-shadow:
+        0 5px 15px rgba(25, 15, 40, 0.4);
+}
+
+
+/* ===== BUTTONS ===== */
+
+.controles button{
+    padding: 10px 16px;
+    margin: 0;
+    border: 2px solid #201b29;
+    border-radius: 7px;
+    background-color: #89739d;
+    color: #f5edff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #51415f;
+    transition: 0.2s;
+}
+
+.controles button:hover{
+    background-color: #bda5d1;
+    color: #2d2437;
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 10px #d9bfff,
+        0 4px 0 #51415f;
+}
+
+.controles button:active{
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #51415f;
+}
+
+
+
